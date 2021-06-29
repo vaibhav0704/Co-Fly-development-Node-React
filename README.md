@@ -1,3 +1,15 @@
+# Understanding the file Structure 
+
+This project contains an express server in the root directory and a React app in the client directory
+
+# Running this project
+
+### Inside the root directory `npm install`
+
+To install all the express related node modules
+
+### Then cd to client directory `cd client` and follow the steps below for react setup
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
