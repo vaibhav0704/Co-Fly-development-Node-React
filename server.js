@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import passport from 'passport';
 import cookieSession from 'cookie-session';
 import authRoutes from './routes/authRoutes.js'
+import testRoutes from './routes/testRoutes.js'
 import './models/User.js'
 import './services/passport.js'
 
@@ -37,8 +38,9 @@ const userSchema = new mongoose.Schema()
 app.use(passport.initialize())
 app.use(passport.session());
 
-// ************************ROUTES******************************//
+//   ************************ROUTES******************************//
 authRoutes(app);
+testRoutes(app);
 
 // ************************PORT LISTENERS**********************//
 const PORT = process.env.PORT || 5000;

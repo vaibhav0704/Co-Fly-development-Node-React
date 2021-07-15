@@ -7,12 +7,13 @@ const authRoutes = (app) => {
 
     app.get('/auth/google/callback', 
     passport.authenticate('google', { failureRedirect: '/login' }),
-    function(req, res) {
-        console.log('done')
+    (req, res) => {
+        res.redirect('/protected_page')
     });
 
     app.get('/api/logout', (req, res) => {
         req.logout()
+        res.redirect('/protected_page')        
     })
 
     app.get('/api/current_user', (req, res) => {
